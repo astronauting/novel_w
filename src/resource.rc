@@ -1,0 +1,57 @@
+#include "resource.h"
+#include <windows.h>
+#pragma code_page(65001)
+
+IDR_MANIFEST RT_MANIFEST "app.manifest"
+IDI_APP ICON "app.ico"
+
+IDR_MAINMENU MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)",                   IDM_FILE_NEW
+        MENUITEM "打开(&O)",                   IDM_FILE_OPEN
+        MENUITEM "保存(&S)",                   IDM_FILE_SAVE
+        MENUITEM "另存为(&A)",                 IDM_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                   IDM_FILE_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤销(&U)",                   IDM_EDIT_UNDO
+        MENUITEM "重做(&R)",                   IDM_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)",                   IDM_EDIT_CUT
+        MENUITEM "复制(&C)",                   IDM_EDIT_COPY
+        MENUITEM "粘贴(&P)",                   IDM_EDIT_PASTE
+        MENUITEM "全选(&A)",                   IDM_EDIT_SELECTALL
+        MENUITEM SEPARATOR
+        MENUITEM "查找(&F)",                   IDM_EDIT_FIND
+    END
+    POPUP "章节(&C)"
+    BEGIN
+        MENUITEM "刷新目录(&R)",               IDM_CHAPTER_REFRESH
+        MENUITEM "上一章(&P)",                 IDM_CHAPTER_PREV
+        MENUITEM "下一章(&N)",                 IDM_CHAPTER_NEXT
+        MENUITEM SEPARATOR
+        MENUITEM "插入章节标题(&I)",           IDM_CHAPTER_INSERT
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "隐藏边框(&B)",               IDM_VIEW_BORDER
+        MENUITEM "一键隐藏(&H)",               IDM_VIEW_HIDE
+        MENUITEM SEPARATOR
+        MENUITEM "字体(&F)...",                IDM_VIEW_FONT
+        MENUITEM "背景颜色(&C)...",            IDM_VIEW_COLOR
+        MENUITEM "吸管取色(&P)",               IDM_VIEW_PICKER
+        MENUITEM "透明度说明(&A)",             IDM_VIEW_ALPHA
+    END
+    POPUP "设置(&S)"
+    BEGIN
+        MENUITEM "快捷键(&K)...",              IDM_SET_HOTKEYS
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "快捷键一览(&L)",             IDM_HELP_KEYS
+    END
+END
