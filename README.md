@@ -18,11 +18,17 @@
 
 ## 运行
 
-目标系统：Windows 10/11 x64，中文界面。当前没有正式 Release 或签名安装包。
+目标系统：Windows 10/11 x64，中文界面。最新正式版本：[v0.1.0](https://github.com/astronauting/novel_w/releases/tag/v0.1.0)。
 
-1. 按下文从源码构建，或在 [Actions](https://github.com/astronauting/novel_w/actions/workflows/windows.yml) 中下载成功运行的 `novel_w-windows-x64` 构建产物（通常需要登录 GitHub）。
-2. 将 `novel_w.exe` 放到自己可写的目录运行，无需安装。
-3. 用“文件 → 打开”打开 `samples/example.txt`，或新建自己的临时文稿。
+1. 下载 [Windows x64 便携包](https://github.com/astronauting/novel_w/releases/download/v0.1.0/novel_w-v0.1.0-windows-x64.zip)，解压到自己可写的目录。
+2. 运行其中的 `novel_w.exe`，无需安装，也无需安装 Visual C++ 运行库。也可只下载[独立 exe](https://github.com/astronauting/novel_w/releases/download/v0.1.0/novel_w.exe)。
+3. 用“文件 → 打开”打开包内的 `samples/example.txt`，或新建自己的临时文稿。
+
+Release 附带 [SHA256SUMS.txt](https://github.com/astronauting/novel_w/releases/download/v0.1.0/SHA256SUMS.txt)，可使用 PowerShell `Get-FileHash .\novel_w-v0.1.0-windows-x64.zip -Algorithm SHA256` 核对。便携包包含程序、许可证、说明和演示文稿，不含私人配置。
+
+程序尚未进行代码签名，Windows 可能显示 SmartScreen 提示；请核对下载来源和校验值，不要关闭系统安全防护。更新前先备份文稿，退出程序后替换 exe，保留自己的 `settings.json`。
+
+[版本变更](CHANGELOG.md) · [所有 Releases](https://github.com/astronauting/novel_w/releases) · [开发版 Actions 构建](https://github.com/astronauting/novel_w/actions/workflows/windows.yml)（不是正式发布包）。
 
 `settings.json` 会写入 exe 同目录，记录外观、快捷键、窗口位置及上次文件路径。不要将此文件随程序公开分享。
 
